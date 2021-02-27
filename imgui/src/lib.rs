@@ -128,6 +128,15 @@ pub struct Ui<'ui> {
 }
 
 impl<'ui> Ui<'ui> {
+    /// Creates an Ui object with a given context
+    pub fn from_ctx(ctx: &'ui Context) -> Self {
+        Self {
+            ctx,
+            font_atlas: None,
+            buffer: crate::UiBuffer::new(1024).into(),
+        }
+    }
+
     /// Internal method to push a single text to our scratch buffer.
     fn scratch_txt(&self, txt: impl AsRef<str>) -> *const sys::cty::c_char {
         unsafe {

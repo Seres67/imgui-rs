@@ -95,6 +95,19 @@ impl Context {
     pub fn create_with_shared_font_atlas(shared_font_atlas: Rc<RefCell<SharedFontAtlas>>) -> Self {
         Self::create_internal(Some(shared_font_atlas))
     }
+    /// Gets the current context
+    pub fn current() -> Self {
+        let ctx = unsafe { sys::igGetCurrentContext() };
+        Self {
+            raw: ctx,
+            shared_font_atlas: None,
+            ini_filename: None,
+            log_filename: None,
+            platform_name: None,
+            renderer_name: None,
+            clipboard_ctx: Box::new(ClipboardContext::dummy().into()),
+        }
+    }
     /// Suspends this context so another context can be the active context.
     #[doc(alias = "CreateContext")]
     pub fn suspend(self) -> SuspendedContext {
