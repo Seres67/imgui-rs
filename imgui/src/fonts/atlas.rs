@@ -32,6 +32,7 @@ pub struct FontId(pub(crate) *const Font);
 /// A font atlas that builds a single texture
 #[repr(C)]
 pub struct FontAtlas {
+    locked: bool,
     /// Configuration flags
     pub flags: FontAtlasFlags,
     /// Texture identifier
@@ -47,9 +48,6 @@ pub struct FontAtlas {
     /// this to 0.
     pub tex_glyph_padding: i32,
 
-    locked: bool,
-    text_ready: bool,
-    tex_pixels_use_colors: bool,
     tex_pixels_alpha8: *mut u8,
     tex_pixels_rgba32: *mut u32,
     tex_width: i32,
@@ -60,8 +58,6 @@ pub struct FontAtlas {
     custom_rects: sys::ImVector_ImFontAtlasCustomRect,
     config_data: sys::ImVector_ImFontConfig,
     tex_uv_lines: [[f32; 4]; 64],
-    font_builder_io: *const sys::ImFontBuilderIO,
-    font_builder_flags: i32,
     pack_id_mouse_cursors: i32,
     pack_id_lines: i32,
 }
@@ -315,7 +311,7 @@ pub struct FontConfig {
     /// Maximum advance_x for glyphs
     pub glyph_max_advance_x: f32,
     /// Settings for a custom font rasterizer if used
-    pub font_builder_flags: u32,
+    pub rasterizer_flags: u32,
     /// Brighten (>1.0) or darken (<1.0) font output
     pub rasterizer_multiply: f32,
     /// Explicitly specify the ellipsis character.
@@ -337,7 +333,7 @@ impl Default for FontConfig {
             glyph_ranges: FontGlyphRanges::default(),
             glyph_min_advance_x: 0.0,
             glyph_max_advance_x: f32::MAX,
-            font_builder_flags: 0,
+            rasterizer_flags: 0,
             rasterizer_multiply: 1.0,
             ellipsis_char: None,
             name: None,
@@ -356,7 +352,7 @@ impl FontConfig {
         raw.GlyphRanges = unsafe { self.glyph_ranges.to_ptr(atlas) };
         raw.GlyphMinAdvanceX = self.glyph_min_advance_x;
         raw.GlyphMaxAdvanceX = self.glyph_max_advance_x;
-        raw.FontBuilderFlags = self.font_builder_flags;
+        raw.RasterizerFlags = self.rasterizer_flags;
         raw.RasterizerMultiply = self.rasterizer_multiply;
         // char is used as "unset" for EllipsisChar
         raw.EllipsisChar = self.ellipsis_char.map(|c| c as u32).unwrap_or(!0);
