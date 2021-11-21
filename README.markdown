@@ -1,12 +1,18 @@
-# imgui-rs: Rust bindings for Dear ImGui
+# imgui-rs: Rust bindings for Dear ImGui 1.80, forked for arcdps addons
 
-[![Build Status](https://github.com/imgui-rs/imgui-rs/workflows/ci/badge.svg)](https://github.com/imgui-rs/imgui-rs/actions)
 [![Latest release on crates.io](https://img.shields.io/crates/v/imgui.svg)](https://crates.io/crates/imgui)
-[![Documentation on docs.rs](https://docs.rs/imgui/badge.svg)](https://docs.rs/imgui)
-[![Wrapped Dear ImGui Version](https://img.shields.io/badge/Dear%20ImGui%20Version-1.84.2-blue.svg)](https://github.com/ocornut/imgui)
+[![Documentation on docs.rs](https://docs.rs/imgui/badge.svg)](https://docs.rs/imgui/0.8.0/imgui/)
+[![Wrapped Dear ImGui Version](https://img.shields.io/badge/Dear%20ImGui%20Version-1.80-blue.svg)](https://github.com/ocornut/imgui)
 
-(Recently under new maintenance, things subject to change)
+## This is a fork
+Addons for [arcdps](https://www.deltaconnected.com/arcdps/) addons are restricted to an older version of Dear ImGui.
+This is a fork of imgui-rs 0.8.0 that is compatible with Dear ImGui 1.80.
 
+### Changes
+- downgrade to Dear ImGui 1.80 (current version used by arcdps)
+- small changes used by the [arcdps rust wrapper](https://github.com/greaka/arcdps_bindings)
+
+## Original README
 ![Hello world](hello_world.png)
 
 ```rust
