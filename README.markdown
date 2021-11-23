@@ -1,7 +1,5 @@
 # imgui-rs: Rust bindings for Dear ImGui 1.80, forked for arcdps addons
 
-[![Latest release on crates.io](https://img.shields.io/crates/v/imgui.svg)](https://crates.io/crates/imgui)
-[![Documentation on docs.rs](https://docs.rs/imgui/badge.svg)](https://docs.rs/imgui/0.8.0/imgui/)
 [![Wrapped Dear ImGui Version](https://img.shields.io/badge/Dear%20ImGui%20Version-1.80-blue.svg)](https://github.com/ocornut/imgui)
 
 ## This is a fork
