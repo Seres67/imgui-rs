@@ -261,7 +261,6 @@ fn test_font_atlas_memory_layout() {
     assert_field_offset!(tex_id, TexID);
     assert_field_offset!(tex_desired_width, TexDesiredWidth);
     assert_field_offset!(tex_glyph_padding, TexGlyphPadding);
-    assert_field_offset!(tex_pixels_use_colors, TexPixelsUseColors);
     assert_field_offset!(tex_pixels_alpha8, TexPixelsAlpha8);
     assert_field_offset!(tex_pixels_rgba32, TexPixelsRGBA32);
     assert_field_offset!(tex_width, TexWidth);
@@ -404,10 +403,6 @@ fn test_font_config_default() {
     assert_eq!(
         font_config.glyph_max_advance_x,
         sys_font_config.GlyphMaxAdvanceX
-    );
-    assert_eq!(
-        font_config.font_builder_flags,
-        sys_font_config.FontBuilderFlags
     );
     assert_eq!(
         font_config.rasterizer_multiply,

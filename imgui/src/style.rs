@@ -10,8 +10,6 @@ use crate::Direction;
 pub struct Style {
     /// Global alpha applies to everything
     pub alpha: f32,
-    /// Additional alpha multiplier applied to disabled elements. Multiplies over current value of [`Style::alpha`].
-    pub disabled_alpha: f32,
     /// Padding within a window
     pub window_padding: [f32; 2],
     /// Rounding radius of window corners.
@@ -499,7 +497,7 @@ fn test_style_memory_layout() {
     assert_field_offset!(anti_aliased_lines_use_tex, AntiAliasedLinesUseTex);
     assert_field_offset!(anti_aliased_fill, AntiAliasedFill);
     assert_field_offset!(curve_tessellation_tol, CurveTessellationTol);
-    assert_field_offset!(circle_tesselation_max_error, CircleTessellationMaxError);
+    assert_field_offset!(circle_tesselation_max_error, CircleSegmentMaxError);
     assert_field_offset!(colors, Colors);
 }
 
