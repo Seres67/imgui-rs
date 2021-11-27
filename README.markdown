@@ -1,16 +1,19 @@
-# imgui-rs: Rust bindings for Dear ImGui 1.80, forked for arcdps addons
+# imgui-rs: Rust bindings for Dear ImGui 1.80 for arcdps addons
 
 [![Wrapped Dear ImGui Version](https://img.shields.io/badge/Dear%20ImGui%20Version-1.80-blue.svg)](https://github.com/ocornut/imgui)
 
 ## This is a fork
-Addons for [arcdps](https://www.deltaconnected.com/arcdps/) addons are restricted to an older version of Dear ImGui.
-This is a fork of imgui-rs 0.8.0 that is compatible with Dear ImGui 1.80.
+Addons for [arcdps](https://www.deltaconnected.com/arcdps/) are restricted to an older version of Dear ImGui.
+This is a fork of imgui-rs 0.8.0 that is compatible with Dear ImGui 1.80 intended for use by arcdps addons.
 
 ### Changes
-- downgrade to Dear ImGui 1.80 (current version used by arcdps)
-- small changes used by the [arcdps rust wrapper](https://github.com/greaka/arcdps_bindings)
+- Allows Ui object creation from context for the [arcdps rust wrapper](https://github.com/greaka/arcdps_bindings)
+- Downgrade to Dear ImGui 1.80 (current version used by arcdps)
+  - APIs that require newer versions of ImGui are removed (mainly the disable API)
+- Text input callback API (character filters) was changed to support 16bit chars, as the arcdps ImGui version
+  does not enable 32bit character support.
 
-## Original README
+# Original README
 ![Hello world](hello_world.png)
 
 ```rust
