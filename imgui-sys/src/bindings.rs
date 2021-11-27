@@ -133,8 +133,7 @@ pub type ImGuiInputTextCallback = ::core::option::Option<
 pub type ImGuiSizeCallback =
     ::core::option::Option<unsafe extern "C" fn(data: *mut ImGuiSizeCallbackData)>;
 pub type ImWchar16 = cty::c_ushort;
-pub type ImWchar32 = cty::c_uint;
-pub type ImWchar = ImWchar32;
+pub type ImWchar = ImWchar16;
 pub type ImU8 = cty::c_uchar;
 pub type ImS16 = cty::c_short;
 pub type ImU32 = cty::c_uint;
@@ -1597,7 +1596,7 @@ pub struct ImFont {
     pub Ascent: f32,
     pub Descent: f32,
     pub MetricsTotalSurface: cty::c_int,
-    pub Used4kPagesMap: [ImU8; 34usize],
+    pub Used4kPagesMap: [ImU8; 2usize],
 }
 impl Default for ImFont {
     fn default() -> Self {
