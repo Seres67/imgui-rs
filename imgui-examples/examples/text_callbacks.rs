@@ -1,4 +1,5 @@
 use imgui::*;
+use crate::sys::ImWchar;
 
 mod support;
 
@@ -35,7 +36,7 @@ fn main() {
 
                 struct AllCallback;
                 impl InputTextCallbackHandler for AllCallback {
-                    fn char_filter(&mut self, c: char) -> Option<char> {
+                    fn char_filter(&mut self, c: u16) -> Option<u16> {
                         println!("Char filter fired! This means a char was inputted.");
                         Some(c)
                     }

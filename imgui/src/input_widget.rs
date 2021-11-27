@@ -681,7 +681,12 @@ pub trait InputTextCallbackHandler {
     ///
     /// To make ImGui run this callback, use [InputTextCallback::CHAR_FILTER] or
     /// [InputTextMultilineCallback::CHAR_FILTER].
-    fn char_filter(&mut self, c: char) -> Option<char> {
+    ///
+    /// # arcdps compatibility note
+    /// arcdps uses ImGui compiled without support for 32bit characters.
+    /// For this reason, we changed this API from Rust `char`s to underlying
+    /// raw characters (16bit).
+    fn char_filter(&mut self, c: u16) -> Option<u16> {
         Some(c)
     }
 
@@ -981,9 +986,9 @@ extern "C" fn callback<T: InputTextCallbackHandler>(
             }
         }
         InputTextFlags::CALLBACK_CHAR_FILTER => {
-            let chr = unsafe { std::char::from_u32((*data).EventChar).unwrap() };
+            let chr = unsafe { (*data).EventChar };
             let new_data = match callback_data.user_data.cback_handler.char_filter(chr) {
-                Some(value) => u32::from(value),
+                Some(value) => value,
                 // 0 means "do not use this char" in imgui docs
                 None => 0,
             };
