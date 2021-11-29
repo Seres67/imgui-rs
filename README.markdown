@@ -7,9 +7,12 @@ Addons for [arcdps](https://www.deltaconnected.com/arcdps/) are restricted to an
 This is a fork of imgui-rs 0.8.0 that is compatible with Dear ImGui 1.80 intended for use by arcdps addons.
 
 ### Changes
+
 - Allows Ui object creation from context for the [arcdps rust wrapper](https://github.com/greaka/arcdps_bindings)
 - Downgrade to Dear ImGui 1.80 (current version used by arcdps)
   - APIs that require newer versions of ImGui are removed (mainly the disable API)
+- Cherry-picked some important fixes from imgui-rs >0.8.0, mostly related to the `input_text` widget not resizing
+  the buffer correctly and segfaulting.
 - Text input callback API (character filters) was changed to support 16bit chars, as the arcdps ImGui version
   does not enable 32bit character support.
 
