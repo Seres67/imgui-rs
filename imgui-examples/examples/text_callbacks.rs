@@ -1,5 +1,4 @@
 use imgui::*;
-use crate::sys::ImWchar;
 
 mod support;
 
