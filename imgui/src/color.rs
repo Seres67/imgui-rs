@@ -15,7 +15,7 @@
 ///
 /// # Example
 /// ```
-/// let mut c = imgui::ImColor32::from_rgba(0x80, 0xc0, 0x40, 0xff);
+/// let mut c = arcdps_imgui::ImColor32::from_rgba(0x80, 0xc0, 0x40, 0xff);
 /// assert_eq!(c.to_bits(), 0xff_40_c0_80); // Note: 0xAA_BB_GG_RR
 /// // Field access
 /// assert_eq!(c.r, 0x80);

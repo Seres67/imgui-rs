@@ -57,8 +57,8 @@ where
     /// are valid values which the slider can be dragged to.
     ///
     /// ```rust
-    /// # use imgui::im_str;
-    /// imgui::Slider::new(im_str!("Example"), i8::MIN, i8::MAX)
+    /// # use arcdps_imgui::im_str;
+    /// arcdps_imgui::Slider::new(im_str!("Example"), i8::MIN, i8::MAX)
     ///     .range(4, 8)
     ///     // Remember to call .build(&ui)
     ///     ;
@@ -151,8 +151,8 @@ where
     /// Constructs a new vertical slider builder with the given size and range.
     ///
     /// ```rust
-    /// # use imgui::im_str;
-    /// imgui::VerticalSlider::new(im_str!("Example"), [20.0, 20.0], i8::MIN, i8::MAX)
+    /// # use arcdps_imgui::im_str;
+    /// arcdps_imgui::VerticalSlider::new(im_str!("Example"), [20.0, 20.0], i8::MIN, i8::MAX)
     ///     .range(4, 8)
     ///     // Remember to call .build(&ui)
     ///     ;
@@ -182,8 +182,8 @@ where
     /// Sets the range for the vertical slider.
     ///
     /// ```rust
-    /// # use imgui::im_str;
-    /// imgui::VerticalSlider::new(im_str!("Example"), [20.0, 20.0], i8::MIN, i8::MAX)
+    /// # use arcdps_imgui::im_str;
+    /// arcdps_imgui::VerticalSlider::new(im_str!("Example"), [20.0, 20.0], i8::MIN, i8::MAX)
     ///     .range(4, 8)
     ///     // Remember to call .build(&ui)
     ///     ;
@@ -275,8 +275,8 @@ where
 {
     /// Sets the range in degrees (inclusive)
     /// ```rust
-    /// # use imgui::im_str;
-    /// imgui::AngleSlider::new(im_str!("Example"))
+    /// # use arcdps_imgui::im_str;
+    /// arcdps_imgui::AngleSlider::new(im_str!("Example"))
     ///     .range_degrees(-20.0, 20.0)
     ///     // Remember to call .build(&ui)
     ///     ;

@@ -143,7 +143,7 @@ impl<'ui> DrawListMut<'ui> {
     /// # Example
     ///
     /// ```rust,no_run
-    /// # use imgui::*;
+    /// # use arcdps_imgui::*;
     /// fn custom_drawing(ui: &Ui) {
     ///     let draw_list = ui.get_window_draw_list();
     ///     draw_list.channels_split(2, |channels| {
@@ -342,7 +342,7 @@ impl<'ui> DrawListMut<'ui> {
     /// # Examples
     ///
     /// ```
-    /// # use imgui::*;
+    /// # use arcdps_imgui::*;
     /// fn custom_button(ui: &Ui, img_id: TextureId) {
     ///     // Invisible button is good widget to customise with image
     ///     ui.invisible_button(im_str!("custom_button"), [100.0, 20.0]);

@@ -26,7 +26,7 @@ use crate::Ui;
 ///
 /// Creating a new active context:
 /// ```
-/// let ctx = imgui::Context::create();
+/// let ctx = arcdps_imgui::Context::create();
 /// // ctx is dropped naturally when it goes out of scope, which deactivates and destroys the
 /// // context
 /// ```
@@ -34,17 +34,17 @@ use crate::Ui;
 /// Never try to create an active context when another one is active:
 ///
 /// ```should_panic
-/// let ctx1 = imgui::Context::create();
+/// let ctx1 = arcdps_imgui::Context::create();
 ///
-/// let ctx2 = imgui::Context::create(); // PANIC
+/// let ctx2 = arcdps_imgui::Context::create(); // PANIC
 /// ```
 ///
 /// Suspending an active context allows you to create another active context:
 ///
 /// ```
-/// let ctx1 = imgui::Context::create();
+/// let ctx1 = arcdps_imgui::Context::create();
 /// let suspended1 = ctx1.suspend();
-/// let ctx2 = imgui::Context::create(); // this is now OK
+/// let ctx2 = arcdps_imgui::Context::create(); // this is now OK
 /// ```
 
 #[derive(Debug)]
@@ -283,7 +283,7 @@ impl Drop for Context {
 /// Suspended contexts are not directly very useful, but you can activate them:
 ///
 /// ```
-/// let suspended = imgui::SuspendedContext::create();
+/// let suspended = arcdps_imgui::SuspendedContext::create();
 /// match suspended.activate() {
 ///   Ok(ctx) => {
 ///     // ctx is now the active context

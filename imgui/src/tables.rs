@@ -420,7 +420,7 @@ impl<'ui> Ui<'ui> {
     ///
     /// # Example
     /// ```no_run
-    /// # let mut ctx = imgui::Context::create();
+    /// # let mut ctx = arcdps_imgui::Context::create();
     /// # { let ui = ctx.frame();
     /// if let Some(_t) = ui.begin_table("Basic-Table", 2) {
     ///     // we have to call next_row because we didn't make headers..
@@ -455,7 +455,7 @@ impl<'ui> Ui<'ui> {
     ///
     /// # Example
     /// ```no_run
-    /// # let mut ctx = imgui::Context::create();
+    /// # let mut ctx = arcdps_imgui::Context::create();
     /// # { let ui = ctx.frame();
     /// if let Some(_t) = ui.begin_table("Basic-Table", 2) {
     ///     // we have to call next_row because we didn't make headers..
@@ -509,7 +509,7 @@ impl<'ui> Ui<'ui> {
     ///
     /// # Example
     /// ```no_run
-    /// # let mut ctx = imgui::Context::create();
+    /// # let mut ctx = arcdps_imgui::Context::create();
     /// # { let ui = ctx.frame();
     /// if let Some(_t) = ui.begin_table("My Table", 2) {
     ///     ui.table_setup_column("One");
@@ -559,7 +559,7 @@ impl<'ui> Ui<'ui> {
     ///
     /// # Example
     /// ```no_run
-    /// # let mut ctx = imgui::Context::create();
+    /// # let mut ctx = arcdps_imgui::Context::create();
     /// # { let ui = ctx.frame();
     /// const COLUMN_COUNT: usize = 3;
     /// if let Some(_t) = ui.begin_table("scroll-freeze-example", COLUMN_COUNT) {

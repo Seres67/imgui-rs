@@ -172,7 +172,7 @@ bitflags! {
 /// # Examples
 ///
 /// ```no_run
-/// # use imgui::*;
+/// # use arcdps_imgui::*;
 /// # let mut imgui = Context::create();
 /// # let ui = imgui.frame();
 /// # let mut color = [0.0, 0.0, 0.0, 1.0];
@@ -346,7 +346,7 @@ impl<'a, T: AsRef<str> + 'a> ColorEdit<'a, T> {
 /// # Examples
 ///
 /// ```no_run
-/// # use imgui::*;
+/// # use arcdps_imgui::*;
 /// # let mut imgui = Context::create();
 /// # let ui = imgui.frame();
 /// # let mut color = [0.0, 0.0, 0.0, 1.0];
@@ -527,7 +527,7 @@ impl<'a, T: AsRef<str>> ColorPicker<'a, T> {
 /// # Examples
 ///
 /// ```no_run
-/// # use imgui::*;
+/// # use arcdps_imgui::*;
 /// # let mut imgui = Context::create();
 /// # let ui = imgui.frame();
 /// ColorButton::new(im_str!("color_button"), [1.0, 0.0, 0.0, 1.0])

@@ -430,7 +430,7 @@ impl<'ui> Ui<'ui> {
     /// # Examples
     ///
     /// ```
-    /// # use imgui::*;
+    /// # use arcdps_imgui::*;
     /// fn user_interface(ui: &Ui) {
     ///     ui.text("Hover over me");
     ///     if ui.is_item_hovered() {
@@ -461,7 +461,7 @@ impl<'ui> Ui<'ui> {
     /// # Examples
     ///
     /// ```
-    /// # use imgui::*;
+    /// # use arcdps_imgui::*;
     /// fn user_interface(ui: &Ui) {
     ///     ui.text("Hover over me");
     ///     if ui.is_item_hovered() {
@@ -614,7 +614,7 @@ impl<'ui> Ui<'ui> {
     /// # Examples
     ///
     /// ```rust,no_run
-    /// # use imgui::*;
+    /// # use arcdps_imgui::*;
     /// fn custom_draw(ui: &Ui) {
     ///     let draw_list = ui.get_window_draw_list();
     ///     // Draw a line
@@ -629,7 +629,7 @@ impl<'ui> Ui<'ui> {
     /// dropped.
     ///
     /// ```rust
-    /// # use imgui::*;
+    /// # use arcdps_imgui::*;
     /// fn custom_draw(ui: &Ui) {
     ///     let draw_list = ui.get_window_draw_list();
     ///     // Draw something...

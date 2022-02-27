@@ -73,7 +73,7 @@ bitflags!(
 /// Creates a source for drag drop data out of the last ID created.
 ///
 /// ```no_run
-/// # use imgui::*;
+/// # use arcdps_imgui::*;
 /// fn show_ui(ui: &Ui<'_>) {
 ///     ui.button("Hello, I am a drag source!");
 ///     
@@ -140,7 +140,7 @@ impl<T: AsRef<str>> DragDropSource<T> {
     /// Using `once_cell` or some shared data, this pattern can be very powerful:
     ///
     /// ```no_run
-    /// # use imgui::*;
+    /// # use arcdps_imgui::*;
     /// fn show_ui(ui: &Ui<'_>, drop_message: &mut Option<String>) {
     ///     ui.button("Drag me!");
     ///
@@ -157,7 +157,7 @@ impl<T: AsRef<str>> DragDropSource<T> {
     ///     ui.button("Target me!");
     ///
     ///     // drag drop TARGET
-    ///     if let Some(target) = imgui::DragDropTarget::new(ui) {
+    ///     if let Some(target) = arcdps_imgui::DragDropTarget::new(ui) {
     ///         if target
     ///             .accept_payload_empty(drag_drop_name, DragDropFlags::empty())
     ///             .is_some()
@@ -193,7 +193,7 @@ impl<T: AsRef<str>> DragDropSource<T> {
     /// to [DragDropTarget].
     ///
     /// ```no_run
-    /// # use imgui::*;
+    /// # use arcdps_imgui::*;
     /// fn show_ui(ui: &Ui<'_>) {
     ///     ui.button("Drag me!");
     ///
@@ -209,7 +209,7 @@ impl<T: AsRef<str>> DragDropSource<T> {
     ///     ui.button("Target me!");
     ///
     ///     // drag drop TARGET
-    ///     if let Some(target) = imgui::DragDropTarget::new(ui) {
+    ///     if let Some(target) = arcdps_imgui::DragDropTarget::new(ui) {
     ///         if let Some(Ok(payload_data)) = target
     ///             .accept_payload::<&'static str, _>(drag_drop_name, DragDropFlags::empty())
     ///         {
@@ -309,7 +309,7 @@ impl Drop for DragDropSourceToolTip<'_> {
 /// Creates a target for drag drop data out of the last ID created.
 ///
 /// ```no_run
-/// # use imgui::*;
+/// # use arcdps_imgui::*;
 /// fn show_ui(ui: &Ui<'_>) {
 ///     // Drop something on this button please!
 ///     ui.button("Hello, I am a drag Target!");

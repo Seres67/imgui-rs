@@ -23,7 +23,7 @@ impl<'ui> Ui<'ui> {
     /// # Examples
     ///
     /// ```no_run
-    /// # use imgui::*;
+    /// # use arcdps_imgui::*;
     /// # let mut ctx = Context::create();
     /// # let font_data_sources = [];
     /// // At initialization time
@@ -50,7 +50,7 @@ impl<'ui> Ui<'ui> {
     /// # Examples
     ///
     /// ```no_run
-    /// # use imgui::*;
+    /// # use arcdps_imgui::*;
     /// # let mut ctx = Context::create();
     /// # let ui = ctx.frame();
     /// const RED: [f32; 4] = [1.0, 0.0, 0.0, 1.0];
@@ -75,7 +75,7 @@ impl<'ui> Ui<'ui> {
     /// # Examples
     ///
     /// ```no_run
-    /// # use imgui::*;
+    /// # use arcdps_imgui::*;
     /// # let mut ctx = Context::create();
     /// # let ui = ctx.frame();
     /// const RED: [f32; 4] = [1.0, 0.0, 0.0, 1.0];
@@ -111,7 +111,7 @@ impl<'ui> Ui<'ui> {
     /// # Examples
     ///
     /// ```no_run
-    /// # use imgui::*;
+    /// # use arcdps_imgui::*;
     /// # let mut ctx = Context::create();
     /// # let ui = ctx.frame();
     /// let style = ui.push_style_var(StyleVar::Alpha(0.2));
@@ -130,7 +130,7 @@ impl<'ui> Ui<'ui> {
     /// # Examples
     ///
     /// ```no_run
-    /// # use imgui::*;
+    /// # use arcdps_imgui::*;
     /// # let mut ctx = Context::create();
     /// # let ui = ctx.frame();
     /// let styles = ui.push_style_vars(&[
