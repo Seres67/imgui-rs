@@ -1,11 +1,11 @@
 [package]
-name = "imgui-sys"
+name = "arcdps-imgui-sys"
 version = "0.8.0"
 edition = "2018"
 authors = ["The imgui-rs Developers"]
-description = "Raw FFI bindings to dear imgui"
-homepage = "https://github.com/imgui-rs/imgui-rs"
-repository = "https://github.com/imgui-rs/imgui-rs"
+description = "Raw FFI bindings to dear imgui; forked for use in arcdps addons"
+homepage = "https://github.com/gw2scratch/imgui-rs"
+repository = "https://github.com/gw2scratch/imgui-rs"
 license = "MIT/Apache-2.0"
 categories = ["gui", "external-ffi-bindings"]
 build = "build.rs"

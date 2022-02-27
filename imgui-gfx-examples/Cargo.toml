@@ -23,7 +23,7 @@ gfx = "0.18"
 gfx_device_gl = "0.16"
 glutin = "0.27"
 image = "0.23"
-imgui = { path = "../imgui" }
+imgui = { package ="arcdps-imgui", path = "../imgui" }
 imgui-gfx-renderer = { path = "../imgui-gfx-renderer" }
 imgui-winit-support = { path = "../imgui-winit-support" }
 old_school_gfx_glutin_ext = "0.27"
