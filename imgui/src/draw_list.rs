@@ -332,6 +332,14 @@ impl<'ui> DrawListMut<'ui> {
         f();
         unsafe { sys::ImDrawList_PopClipRect(self.draw_list) }
     }
+
+    #[doc(alias = "PushClipRectFullScreen", alias = "PopClipRect")]
+    pub fn with_clip_rect_fullscreen<F>(&self, f: F) where F: FnOnce(),
+    {
+        unsafe { sys::ImDrawList_PushClipRectFullScreen(self.draw_list) }
+        f();
+        unsafe { sys::ImDrawList_PopClipRect(self.draw_list) }
+    }
 }
 
 /// # Images
